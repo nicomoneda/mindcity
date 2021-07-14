@@ -6,10 +6,10 @@ class GetStreams < ApplicationService
   def call
     channel_infos = {}
     Stream.destroy_all
-	  @streams = GetStreamsJob.perform_now()
+	  @streams = GetStreamsJob.perform_now("wakfu")
     @streams.each do |stream|
 		  channel_infos = stream["channel"]
-		  Stream.create(title: channel["status"], name: channel["name"])
+		  Stream.create(title: channel_infos["status"], name: channel_infos["name"])
     end
   end
 end

@@ -7,7 +7,17 @@ import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
+import load_streams from "./load_streams"
 
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+document.addEventListener('turbolinks:load', ev => { 
+  if (document.getElementById("display_streams")) {
+    load_streams();
+  }
+  else {
+    console.log("cheh");
+  }
+})

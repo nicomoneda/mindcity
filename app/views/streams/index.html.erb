@@ -1,0 +1,14 @@
+<h1>Les lives en cours</h1>
+
+<div id="display_streams">
+  <% @streams.each do |stream| %>
+    <div id="twitch-<%= stream.name %>" class="twitch-embed" data-stream=<%= stream.name %>></div>
+  <% end %>
+</div>
+
+<%# stream = {
+  title:
+  name: 
+} %>
+
+
