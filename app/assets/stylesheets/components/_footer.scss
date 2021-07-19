@@ -1,0 +1,18 @@
+.footer-mindcity {
+  height: 56px;
+  padding: 8px 16px;
+  background-color: rgba($color: #2d2d3d, $alpha: 1.0);
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}

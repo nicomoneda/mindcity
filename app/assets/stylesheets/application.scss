@@ -13,3 +13,34 @@
  *= require_tree .
  *= require_self
  */
+
+ @import "bootstrap/scss/bootstrap";
+ @import "components/navbar";
+ @import "components/footer";
+
+//  @font-face {
+//    font-family: 'Gilroy-Light';
+//    src: url(../fonts/Gilroy-Light.otf);
+//  }
+ 
+ h1, h2, h3, p, ul, li {
+  color: white;
+ }
+
+body {
+  background-color: #1d1d27;
+}
+
+ a {
+    color: white;    
+    text-decoration: none;
+ }
+ 
+ a:hover {
+   color: white;
+    text-decoration: none;
+ }
+
+ .container {
+   min-height: calc(100vh - 112px);
+ }

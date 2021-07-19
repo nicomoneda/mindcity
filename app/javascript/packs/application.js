@@ -13,11 +13,11 @@ Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
-document.addEventListener('turbolinks:load', ev => { 
-  if (document.getElementById("display_streams")) {
-    load_streams();
-  }
-  else {
-    console.log("cheh");
-  }
-})
+// document.addEventListener('turbolinks:load', ev => { 
+//   if (document.getElementById("display_streams")) {
+//     load_streams();
+//   }
+//   else {
+//     console.log("cheh");
+//   }
+// })

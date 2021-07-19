@@ -1,14 +1,14 @@
-<h1>Les lives en cours</h1>
-
-<div id="display_streams">
-  <% @streams.each do |stream| %>
-    <div id="twitch-<%= stream.name %>" class="twitch-embed" data-stream=<%= stream.name %>></div>
-  <% end %>
+<div class="container p-3">
+  <h1>Lives en cours</h1>
+  <div class="d-grid row">
+    <% @streams.each do |stream| %>
+      <div class="col-4">
+        <p><%= stream.name.capitalize %></p>
+        <% url_link = "http://www.twitch.tv/#{stream.name}" %>
+        <%= link_to "#{image_tag(stream.preview_url, alttext: "Stream de #{stream.name}")}".html_safe, url_link.html_safe, class:"stream_preview" %>
+      </div>
+    <% end %>
+  </div>
 </div>
-
-<%# stream = {
-  title:
-  name: 
-} %>
 
 

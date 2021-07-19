@@ -1,0 +1,29 @@
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.title {
+  color: white;
+}
+
+.mindcity_links {
+  justify-content: space-around;
+}
+
+.mdc-rules {
+  color: white;
+  font-size: 32px;
+  height: 64px;
+  width: 312px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2d2d3d;
+  border-radius: 16px;
+  transition: all .4s;
+}
+
+.mdc-rules:hover {
+  box-shadow: 0px 0px 8px 4px rgba($color: #5CE1E6, $alpha: 0.25);
+  transform: scale(1.05);
+}
