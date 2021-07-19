@@ -1,13 +1,19 @@
 <div class="container p-3">
   <h1>Lives en cours</h1>
-  <div class="d-grid row">
-    <% @streams.each do |stream| %>
-      <div class="col-4">
-        <p><%= stream.name.capitalize %></p>
-        <% url_link = "http://www.twitch.tv/#{stream.name}" %>
-        <%= link_to "#{image_tag(stream.preview_url, alttext: "Stream de #{stream.name}")}".html_safe, url_link.html_safe, class:"stream_preview" %>
-      </div>
+  <div class="d-grid row justify-content-center">
+    
+    <% if @streams.size == 0 %>
+      <p id="no-stream">Il n'y a rien à voir pour l'instant. Reviens plus tard !</p>
+    <% else %>
+      <% @streams.each do |stream| %>
+        <div class="col-4">
+          <p><%= stream.name.capitalize %></p>
+          <% url_link = "http://www.twitch.tv/#{stream.name}" %>
+          <%= link_to "#{image_tag(stream.preview_url, alttext: "Stream de #{stream.name}")}".html_safe, url_link.html_safe, class:"stream_preview" %>
+        </div>
+      <% end %>
     <% end %>
+    
   </div>
 </div>
 
