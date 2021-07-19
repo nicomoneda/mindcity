@@ -2,7 +2,7 @@
   <h1>Lives en cours</h1>
   <div class="d-grid row justify-content-center">
     
-    <% if @streams.size == 0 %>
+    <% if Stream.all.size == 0 %>
       <p id="no-stream">Il n'y a rien à voir pour l'instant. Reviens plus tard !</p>
     <% else %>
       <% @streams.each do |stream| %>
