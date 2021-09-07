@@ -13,10 +13,13 @@ class GetStreamsJob < ApplicationJob
 
     request = Net::HTTP::Get.new(url)
     request["Accept"] = "application/vnd.twitchtv.v5+json"
+    puts ENV['TWITCH_TOKEN']
     request["client-id"] = ENV['TWITCH_TOKEN']
 
     response = https.request(request)
+    ap response.read_body
     streams = JSON.parse(response.read_body)["streams"]
+    ap streams
     return streams
   end
 end

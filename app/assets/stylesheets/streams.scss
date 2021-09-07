@@ -5,3 +5,68 @@
 #no-stream {
   font-size: 32px;
 }
+
+.stream_card {
+  display: grid;
+  justify-items: center;
+  align-content: baseline;
+  margin: 16px 24px;
+  width: 344px;
+  max-height: 352px;
+  background-color: #2d2d3d;
+  border-style: solid;
+  border-width: medium;
+  border-color: #5febf09a;
+  border-radius: 16px;
+}
+
+@media screen and (max-width: 600px) {
+  .stream_card {
+    margin: 16px 0px;
+  }
+}
+
+.stream_card:hover {
+  box-shadow: 0px 0px 16px 8px rgba($color: #5CE1E6, $alpha: 0.25);
+  transition: 0.4s;
+}
+
+.top-infos {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  p {
+    padding: 0 1rem;
+    margin: 0.25rem 0.5rem 0.75rem;
+    font-size: x-large;
+    // font-style: italic;
+    // color: white;
+    // color: #2d2d3d;
+    // text-shadow: -1px -1px 0 #FFA000,
+    // 1px -1px 0 #FFA000,
+    // -1px 1px 0 #FFA000,
+    // 1px 1px 0 #FFA000;
+    // text-shadow: -1px -1px 0 #5FEBF0,
+    // 1px -1px 0 #5FEBF0,
+    // -1px 1px 0 #5FEBF0,
+    // 1px 1px 0 #5FEBF0;
+  }
+}
+
+.stream_infos {
+  color: white;
+}
+
+.stream_preview {
+  border-radius: 8px;
+}
+
+.title_stream {
+  margin: 8px;
+  align-items: center;
+  color: white;
+}
+
+#stream-container {
+  max-width: 1200px;
+}
